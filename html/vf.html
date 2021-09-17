@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View hours - Le meilleur site gratuit de streaming</title>
+    <meta name="viewport" content="width = 	device-width" initial-scale=1>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../library/jquery-3.3.1.min.js"></script>
+    <!--<script src ="js/bootstrap.js"></script>		-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/latest_movies.css">
+</head>
+
+<body>
+    <a name="top_header"></a>
+    <div class="container-fluid">
+        <div class="top_header">
+            <h2>View hours</h2>
+            <h5>Le meilleur site gratuit de streaming</h5>
+        </div>
+
+
+        <!-- navigation start -->
+        <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="80">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../menu.html" class="navbar-brand"><img src="../res/icon/logo.png"></a>
+                        </li>
+                    </ul>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class = 	"icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="../menu.html">Accueil</a></li>
+                        <li><a href="trailer.html">bande-annonce</a></li>
+                        <li><a href="vost.html">Vost Fr</a></li>
+                        <li><a href="vf.html">VF</a></li>
+                        <li><a href="">VO (soon)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navigation part end -->
+        <!-- latest_movies start -->
+        <div class="latest_movies_container">
+            <div class="latest_movies_header">
+                <h1>voix française</h1>
+            </div>
+            <div class="tab-content">
+                <!-- in_theatres start -->
+                <div class="latest_movies_content fade in" id="in_theaters">
+                    <div class="latest_movies">
+                        <div>
+                            <a href="https://wvvw.toonanime.tv/anime-vf/1378-tantei-wa-mou-shindeiru-vf.html" target="_blank">
+                                <img class="photo" src="../res/img/tantei_wa_mou_shindeiru_the_lost_memory_10012.jpg">
+                                <div class="caption">
+                                    Tantei wa mou shindeiru
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- in_theaters end -->
+
+        </div>
+        <a id="go_to_top" class="btn btn-info" href="#top_header"><span class = "glyphicon glyphicon-chevron-up"></span></a>
+
+        <script>
+            $(document).ready(function() {
+                $("#most_popular").hide();
+                $("#coming_soon").hide();
+
+                $("#in_theaters_btn").on("click", function() {
+                    $("#in_theaters").show();
+                    $("#most_popular").hide();
+                    $("#coming_soon").hide();
+                });
+
+                $("#most_popular_btn").on("click", function() {
+                    $("#in_theaters").hide();
+                    $("#most_popular").show();
+                    $("#coming_soon").hide();
+                });
+                $("#coming_soon_btn").on("click", function() {
+                    $("#in_theaters").hide();
+                    $("#most_popular").hide();
+                    $("#coming_soon").show();
+                });
+            });
+        </script>
+</body>
+
+</html>
